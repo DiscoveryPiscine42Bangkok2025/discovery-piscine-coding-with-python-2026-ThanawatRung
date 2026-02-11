@@ -167,7 +167,7 @@ def checkmate(board):
         king_playing_positions = find_king_playing_positions(position_row_K,position_col_K,len(chess_board_2D),len(chess_board_2D[0]))
         print("\n\nKing playing position:", king_playing_positions)
         print("King position:", (position_row_K, position_col_K))
-        print("--------------------------------------------------------------------------------------------------------")
+        print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
         
         attack_positions = []
         
@@ -178,7 +178,7 @@ def checkmate(board):
             attack_positions.extend(bishop_attacking_positions)
             print("Bishop Attacking positions:", bishop_attacking_positions)
             print("Bishop positions:", bishop_positions)
-            print("--------------------------------------------------------------------------------------------------------")
+            print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
         
         if counts_piece[2]>0:
             #find rook position
@@ -187,7 +187,7 @@ def checkmate(board):
             attack_positions.extend(rook_attacking_positions)
             print("Rook Attacking positions:", rook_attacking_positions)
             print("Rook positions:", rook_positions)
-            print("--------------------------------------------------------------------------------------------------------")
+            print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
             
         if counts_piece[3]>0:
             #find queen position
@@ -196,7 +196,7 @@ def checkmate(board):
             attack_positions.extend(queen_attacking_positions)
             print("Queen Attacking positions:", queen_attacking_positions)
             print("Queen positions:", queen_positions)
-            print("--------------------------------------------------------------------------------------------------------")
+            print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
         
         if counts_piece[4]>0:
             #find pawn position
@@ -205,20 +205,20 @@ def checkmate(board):
             attack_positions.extend(pawn_attacking_positions)
             print("Pawn Attacking positions:", pawn_attacking_positions)
             print("Pawn positions:", pawn_positions)
-            print("--------------------------------------------------------------------------------------------------------")
+            print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
             
             
         attack_positions = list(set(attack_positions)) #clean attack_position from list of set to single set
         
         print("all attack positions:", attack_positions)
-        print("--------------------------------------------------------------------------------------------------------")
+        print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
         
 ###########################################################################################################################################################################
         #Check if king is in check
         is_in_check = check((position_row_K, position_col_K), attack_positions)
         print("Check?:",end="")
         print("Success" if is_in_check else "Fail")
-        print("--------------------------------------------------------------------------------------------------------")
+        print("----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------")
 
 ###########################################################################################################################################################################
         #Check mate function
